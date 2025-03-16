@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import { LatestPost } from "~/app/_components/post";
 import { api, HydrateClient } from "~/trpc/server";
 import NavBar from "./_components/navbar";
@@ -12,12 +11,15 @@ export default async function Home() {
   void api.post.getLatest.prefetch();
 
   return (
-    <div>
-    <NavBar/>
-    <DottedBackground/>
-    <Footer/>
-    
-  
+    <div className="flex flex-col min-h-screen relative">
+      <DottedBackground /> {/* Ensure background covers everything */}
+      <NavBar />
+      <main className="flex-1 flex flex-col justify-center items-center p-4">
+        {/* Your page content here */}
+        <h1 className="text-3xl font-bold">Welcome to MyApp</h1>
+        <p className="text-gray-600">Tesing</p>
+      </main>
+      <Footer />
     </div>
   );
 }
