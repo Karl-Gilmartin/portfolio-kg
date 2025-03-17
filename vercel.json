@@ -1,0 +1,9 @@
+{
+    "rewrites": [
+      {
+        "source": "/biotrail/:path*",
+        "destination": "https://biotrail.vercel.app/:path*"
+      }
+    ]
+  }
+  
