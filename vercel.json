@@ -2,7 +2,7 @@
     "rewrites": [
       {
         "source": "/bio-trail/:path*",
-        "destination": "https://https://bio-trail.vercel.app//:path*"
+        "destination": "https://bio-trail.vercel.app/:path*"
       }
     ]
   }
