@@ -6,10 +6,10 @@ import Link from "next/link";
 import { db } from "../../../server/db"; // ✅ Use `db` instead of `prisma`
 import { getImageUrl } from "../../utils/getImage";
 
-export default async function BlogPostPage({ params }: { params: { id: string } }) {
+export default async function BlogPostPage({ params }: { params: Promise<{ id: string }> }) {
   // Fetch blog post from Prisma (Supabase DB)
   const post = await db.post.findUnique({
-    where: { id: Number(params.id) }, // Ensure ID is cast as a number
+    where: { id: Number((await params).id) }, // Ensure ID is cast as a number
   });
   console.log("GOT POST", post);
   
