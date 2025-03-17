@@ -16,8 +16,8 @@ export default async function Home() {
       <NavBar />
       <main className="flex-1 flex flex-col justify-center items-center p-4">
         {/* Your page content here */}
-        <h1 className="text-3xl font-bold">Welcome to MyApp</h1>
-        <p className="text-gray-600">Tesing</p>
+        <h1 className="text-3xl font-bold">Welcome and Hello 👋👋</h1>
+        <p className="text-gray-600">This is a work in progress. <a className="font-extralight italic">Karl</a></p>
       </main>
       <Footer />
     </div>
